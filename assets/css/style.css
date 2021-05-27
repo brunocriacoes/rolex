@@ -72,10 +72,27 @@ body {
     .s11 { width: calc( var(--col) * 11 ); }
     .s12 { width: calc( var(--col) * 12 ); }
 }
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+@media ( max-width: 800px ) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .container {
     display: block;
     width: 960px;
     max-width: 90vw;
+    margin: 0 auto;
+}
+.container-2 {
+    display: block;
+    width: 90%;
     margin: 0 auto;
 }
 img { max-width: 100%; }
@@ -90,6 +107,11 @@ img { max-width: 100%; }
 .bloco-text {
     padding: 0 20%;
 }
+@media (max-width: 800px) {
+    .bloco-text {
+        padding: 20px;
+    }
+}
 p {
     display: block;
     padding: 0;
@@ -102,6 +124,11 @@ p {
     display: block;
     height: var(--h);
 }
+@media (max-width: 800px) {
+    .space {
+        --h: 30px;
+    }
+}
 h1, h2 {
     display: block;
     margin: 0;
@@ -109,4 +136,19 @@ h1, h2 {
     font-size: 25px;
     margin-bottom: 20px;
     font-weight: 400;
+}
+
+.area {
+    grid-template-areas: "text img";
+}
+.area-text {
+    grid-area: text;
+}
+.area-img {
+    grid-area: img;
+}
+@media (max-width: 800px) {
+    .area {
+        grid-template-areas: "img" "text";
+    }
 }
