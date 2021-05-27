@@ -74,7 +74,6 @@ body {
 }
 .grid {
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
@@ -99,13 +98,16 @@ img { max-width: 100%; }
 .image-responsive {
     display: block;
     width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 .center-text {
     display: block;
     text-align: center;
 }
 .bloco-text {
-    padding: 0 20%;
+    padding: 0 18%;
 }
 @media (max-width: 800px) {
     .bloco-text {
@@ -116,7 +118,7 @@ p {
     display: block;
     padding: 0;
     margin: 0;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: 300;
 }
 .space {
@@ -151,4 +153,19 @@ h1, h2 {
     .area {
         grid-template-areas: "img" "text";
     }
+}
+.subtitle {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.border-bot {
+    display: block;
+    width: 100%;
+    background-color: #FFF;
+    height: 5px;
+    margin-top: -4px;
+    position: relative;
+    z-index: 999;
 }
